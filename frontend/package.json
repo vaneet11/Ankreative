@@ -108,6 +108,9 @@
       "parser": "babel-eslint"
     }
   },
+  "engines": {
+    "node": "14.x"
+  },
   "postcss": {
     "plugins": {
       "autoprefixer": {}

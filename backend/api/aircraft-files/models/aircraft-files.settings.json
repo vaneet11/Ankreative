@@ -1,0 +1,45 @@
+{
+  "kind": "collectionType",
+  "collectionName": "aircraft_files",
+  "info": {
+    "name": "Aircraft Files",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "file": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "aircraft": {
+      "model": "aircrafts",
+      "via": "aircraft_files"
+    },
+    "comment": {
+      "type": "text"
+    },
+    "base": {
+      "type": "string"
+    },
+    "last_downloaded": {
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "reports": {
+      "collection": "reports",
+      "via": "aircraft_file"
+    }
+  }
+}

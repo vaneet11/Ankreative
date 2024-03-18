@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/aircraft-files",
+      "handler": "aircraft-files.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/aircraft-files/count",
+      "handler": "aircraft-files.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/aircraft-files/:id",
+      "handler": "aircraft-files.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/aircraft-files",
+      "handler": "aircraft-files.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/aircraft-files/:id",
+      "handler": "aircraft-files.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/aircraft-files/:id",
+      "handler": "aircraft-files.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "kind": "collectionType",
+  "collectionName": "aircrafts",
+  "info": {
+    "name": "Aircrafts",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "aircraft_files": {
+      "via": "aircraft",
+      "collection": "aircraft-files"
+    },
+    "aircraft_serial_number": {
+      "type": "integer"
+    },
+    "aircraft_type": {
+      "type": "string"
+    },
+    "fdr_part_number": {
+      "type": "string"
+    },
+    "fdr_serial_number": {
+      "type": "string"
+    },
+    "qar_part_number": {
+      "type": "string"
+    },
+    "qar_serial_number": {
+      "type": "string"
+    },
+    "cvr_part_number": {
+      "type": "string"
+    },
+    "cvr_serial_number": {
+      "type": "string"
+    },
+    "comment": {
+      "type": "text"
+    },
+    "users_permissions_users": {
+      "plugin": "users-permissions",
+      "collection": "user",
+      "via": "aircrafts",
+      "dominant": true
+    },
+    "aircraft_disabled": {
+      "type": "boolean",
+      "default": false
+    },
+    "aircraft_image":{
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    }
+  }
+}

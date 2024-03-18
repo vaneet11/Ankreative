@@ -1,0 +1,58 @@
+{
+  "kind": "collectionType",
+  "collectionName": "reports",
+  "info": {
+    "name": "Reports",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "report_file": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "comment": {
+      "type": "text"
+    },
+    "uploader": {
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "last_download": {
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "meta": {
+      "type": "json"
+    },
+    "file_date": {
+      "type": "date"
+    },
+    "file_bits": {
+      "type": "boolean",
+      "default": false,
+      "required": false
+    },
+    "level3": {
+      "type": "boolean",
+      "default": false,
+      "required": false
+    },
+    "aircraft_file": {
+      "via": "reports",
+      "model": "aircraft-files"
+    }
+  }
+}

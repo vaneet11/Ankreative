@@ -1,0 +1,30 @@
+{
+  "data": [
+    {
+      "headTitle1": "Menu",
+      "headTitle2": "",
+      "type": "headtitle"
+    },
+    {
+      "title": "Aircraft",
+      "icon": "send",
+      "type": "link",
+      "active": false,
+      "path": "/client/aircrafts"
+    },
+    {
+      "title": "Reports",
+      "icon": "file-text",
+      "type": "link",
+      "active": false,
+      "path": "/client/reports"
+    },
+    {
+      "title": "Insights",
+      "icon": "bar-chart",
+      "type": "link",
+      "active": false,
+      "path": "/client/insights"
+    }
+  ]
+}
